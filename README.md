@@ -24,24 +24,23 @@ Kontakt – adresa, telefon, e-mail + kontaktní formulář.
 
 **Návrh designu / wireframe**
 
-Barevné ladění v přírodních tónech (béžová, hnědá, jemná oranžová).
-Přehledné blokové uspořádání sekcí pod sebou.
-Karty štěňat v gridu (2–3 sloupce podle šířky obrazovky).
-Jednoduché a čitelné UI, moderní prvky (rounded, shadow, Tailwind komponenty).
-(Žák může doplnit ruční skicu, schéma nebo jednoduchý digitální wireframe.)
+- Barevné ladění.
+- Přehledné blokové uspořádání sekcí pod sebou.
+- Karty trenérů v gridu (2–3 sloupce podle šířky obrazovky).
+- Jednoduché a čitelné UI, moderní prvky (rounded, shadow).
 
 **Použité technologie**
 
-Frontend: HTML, CSS, JavaScript
-Data: JSON soubory pro x textové sekce + JSON seznam trenérů
-AJAX: načítání obsahu sekcí a seznamu trenérů
-Backend: jednoduchý PHP endpoint pro odeslání kontaktního formuláře
-Verzování: Git + GitHub (repozitář dostupný vyučujícímu)
+- Frontend: HTML, CSS, JavaScript
+- Data: JSON soubory pro x textové sekce + JSON seznam trenérů
+- AJAX: načítání obsahu sekcí a seznamu trenérů
+- Backend: jednoduchý PHP endpoint pro odeslání kontaktního formuláře
+- Verzování: Git + GitHub (repozitář dostupný vyučujícímu)
 
 **Očekávaný přínos / co se naučím**
 
-práce s JSON a strukturovanými daty
-načítání dat pomocí AJAX a dynamické vkládání obsahu
-tvorba responzivního designu
-základní formulářová komunikace se serverem
-organizace projektu ve složkách, verzování přes GitHub
+- práce s JSON a strukturovanými daty
+- načítání dat pomocí AJAX a dynamické vkládání obsahu
+- tvorba responzivního designu
+- základní formulářová komunikace se serverem
+- organizace projektu ve složkách, verzování přes GitHub
