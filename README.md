@@ -1,10 +1,10 @@
 **Název**
 
-Registrace do týmu (Formulář)
+Registrace do týmu (*Formulář*)
 
 **Žák**
 
-Rostislav Patočka
+*Rostislav Patočka*
 
 **Stučný popis**
 
@@ -12,15 +12,15 @@ Webový formulář na přihlášení svého dítěte do týmu, přehled trenér�
 
 **Cílová skupina**
 
-Zájemci jsou Rodiče a scoutery (30+), návštěvníci hledají informace o tréninkách ale i o trenérech, kteří budou mít možnosti naučit mále ratolesti a jejich zaměření na sport.
+Zájemci jsou Rodiče a scouteři (30+), návštěvníci hledají informace o tréninkách ale i o trenérech, kteří budou mít možnosti naučit mále ratolesti a jejich zaměření na sport.
 
 **Návrh obsahových sekcí**
 
-O nás – základní představení týmu a pár informací o členech týmu.
-Historie – informace jak si klub vede v lize, významné úspěchy.
-Přehledy tréninků – dny a časy tréninků pro různé věkové kategorie.
-Podmínky přijetí – podmínky pro přijetí dítěte do týmu, věkové kategorie, požadavky. 
-Kontakt – adresa, telefon, e-mail + kontaktní formulář.
+- O nás – základní představení týmu a pár informací o členech týmu.
+- Historie – informace jak si klub vede v lize, významné úspěchy.
+- Přehledy tréninků – dny a časy tréninků pro různé věkové kategorie.
+- Podmínky přijetí – podmínky pro přijetí dítěte do týmu, věkové kategorie, - požadavky. 
+- Kontakt – adresa, telefon, e-mail + kontaktní formulář.
 
 **Návrh designu / wireframe**
 
