@@ -22,6 +22,7 @@ Podmínky přijetí – podmínky pro přijetí dítěte do týmu, věkové kate
 Kontakt – adresa, telefon, e-mail + kontaktní formulář.
 
 **Návrh designu / wireframe**
+
 Barevné ladění v přírodních tónech (béžová, hnědá, jemná oranžová).
 
 Přehledné blokové uspořádání sekcí pod sebou.
@@ -33,6 +34,7 @@ Jednoduché a čitelné UI, moderní prvky (rounded, shadow, Tailwind komponenty
 (Žák může doplnit ruční skicu, schéma nebo jednoduchý digitální wireframe.)
 
 **Použité technologie**
+
 Frontend: HTML, CSS, JavaScript
 
 Data: JSON soubory pro x textové sekce + JSON seznam trenérů
@@ -44,6 +46,7 @@ Backend: jednoduchý PHP endpoint pro odeslání kontaktního formuláře
 Verzování: Git + GitHub (repozitář dostupný vyučujícímu)
 
 **Očekávaný přínos / co se naučím**
+
 práce s JSON a strukturovanými daty
 
 načítání dat pomocí AJAX a dynamické vkládání obsahu
