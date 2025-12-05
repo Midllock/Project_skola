@@ -1,0 +1,23 @@
+{
+ "team": {
+        "divisions": [
+            "staré harcov",
+            "mladé harcov",
+            "dorostenci"
+        ],
+        "trainings": {
+            "young": {
+                "day": "pondělí",
+                "day2": "středa"
+            },
+            "old": {
+                "day": "pondělí",
+                "day2": "pátek"
+            },
+            "others": {
+                "day": "pondělí",
+                "day2": "pátek"
+            }
+        }
+    }
+}

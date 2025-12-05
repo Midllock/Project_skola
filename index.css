@@ -1,24 +1,22 @@
 body{
     background-color: white;
+    margin:0;
 }
-header{
-    top:0;
+main{
     color: white;
     z-index: 100;
     text-align: center;
     background-color: black;
-    position: sticky;
-    margin:0;
-    padding: 20px;
-    border: 10px;
-    border-color: black;
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    font-size: 30px;
+    font: bold;
+    padding: 1%;
+    
 }
-p{
-    font-size: 20px;
-    color: black;
-    text-align: justify;
-    margin: 20px;
-}
+
+
 footer{
     background-color: black;
     color: white;
