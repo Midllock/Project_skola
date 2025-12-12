@@ -1,20 +1,66 @@
 body{
-    background-color: white;
-    margin:0;
+    background-color: rgb(31, 31, 31);
+    margin: 0;
 }
 main{
     color: white;
     z-index: 100;
     text-align: center;
     background-color: black;
-    position: fixed;
-    width: 100%;
+    position: stiky;
+    width: 97.77%;
     height: 40px;
     font-size: 30px;
     font: bold;
     padding: 1%;
-    
+    border-bottom: 2px;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    cursor: pointer;
+    border: 2px solid #0000; /* Tenký, tmavý okraj */
+    border-radius: 5px; /* Lehce zaoblené rohy */
+    transition: border-color 0.3s ease-out, border-width 0.3s ease-out;
 }
+.tabule_info{
+    background-color:  rgb(11, 11, 11);
+    margin-left: 10%;
+    color: white;
+    width: 80%;
+    height: 300px;
+    left: 0;
+    margin-top: 3%;
+    border-radius: 25px;
+    border: 2px #0000; /* Tenký, tmavý okraj */
+}
+.info{
+    font-size: 30px;
+    font: bold;
+    margin: 0;
+}
+.text{
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    left: 0;
+    padding: 20px;
+}
+
+a{
+    
+    margin-left: 50%;
+    font-size: 15px;
+    padding: 5px 10px;
+    background-color: rgb(11, 11, 11);
+    color: white;
+    text-decoration: none; /* Odstraní podtržení odkazu */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: black ;
+}
+
 
 
 footer{
@@ -26,4 +72,9 @@ footer{
     width: 100%;
     height: 80px;
     left: 0%;
+}
+
+.main:hover {
+    border-color: rgb(31, 31, 31); /* Světlejší barva okraje při najetí myší */
+    border-width: 2px; /* Zvýšení šířky okraje při najetí myší */
 }
