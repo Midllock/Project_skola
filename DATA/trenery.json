@@ -5,7 +5,7 @@
     "Gender": "male",
     "birth": "20.5.2006",
     "Licence": "D",
-    "Licence_aktivni": true,
+    "Licence_activ": true,
     "Status": "active"
   },
   {
@@ -14,7 +14,7 @@
     "Gender": "male",
     "birth": "20.5.2006",
     "Licence": "-",
-    "Licence_aktivni": false,
+    "Licence_activ": false,
     "Status": "active"
   },
   {
@@ -23,7 +23,7 @@
     "Gender": "male",
     "birth": "20.5.2006",
     "Licence": "-",
-    "Licence_aktivni": false,
+    "Licence_activ": false,
     "Status": "active"
   },
   {
@@ -32,7 +32,7 @@
     "Gender": "male",
     "birth": "30.5.2006",
     "Licence": "D",
-    "Licence_aktivni": true,
+    "Licence_activ": true,
     "Status": "active"
   },
   {
@@ -41,7 +41,7 @@
     "Gender": "female",
     "birth": "22.11.2002",
     "Licence": "-",
-    "Licence_aktivni": false,
+    "Licence_activ": false,
     "Status": "active"
   }
 ]
