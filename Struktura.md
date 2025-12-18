@@ -18,10 +18,9 @@ web-project/
 ├─ /data
 │ ├─ about.json
 │ ├─ trener.json
-│ ├─ conditions.json
 │ └─ contact.json
 │
 ├─ /api
 │ └─ getPuppies.php # endpoint vracející puppies.json
 │
-└─ /docs # dokumentace
+└─ /docs #dokumentace

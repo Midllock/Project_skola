@@ -6,25 +6,25 @@
     "birth": "20.5.2006",
     "Licence": "D",
     "Licence_activ": true,
-    "Status": "active"
+    "Status": "Active"
   },
   {
     "ID": 2,
-    "Name": "Brožis",
+    "Name": "Vojta",
     "Gender": "male",
     "birth": "20.5.2006",
     "Licence": "-",
     "Licence_activ": false,
-    "Status": "active"
+    "Status": "Active"
   },
   {
     "ID": 3,
-    "Name": "Firmi",
+    "Name": "Firman",
     "Gender": "male",
     "birth": "20.5.2006",
     "Licence": "-",
     "Licence_activ": false,
-    "Status": "active"
+    "Status": "Active"
   },
   {
     "ID": 4,
@@ -33,7 +33,7 @@
     "birth": "30.5.2006",
     "Licence": "D",
     "Licence_activ": true,
-    "Status": "active"
+    "Status": "Active"
   },
   {
     "ID": 5,
@@ -42,6 +42,6 @@
     "birth": "22.11.2002",
     "Licence": "-",
     "Licence_activ": false,
-    "Status": "active"
+    "Status": "Active"
   }
 ]
