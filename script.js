@@ -102,3 +102,31 @@ async function nacistKontakty(cesta) {
 }
 
 nacistKontakty("DATA/kontakty.json");
+
+class Prihlaska {
+    constructor(jmeno, email, zprava) {
+        this.jmeno = jmeno;
+        this.email = email;
+        this.zprava = zprava;
+    }
+}
+
+const seznamPrihlasek = [];
+const form = document.getElementById("prihlaseniForm");
+const ulSeznam = document.getElementById("seznamPrihlasek");
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const jmeno = document.getElementById("jmeno").value;
+    const email = document.getElementById("email").value;
+    const zprava = document.getElementById("zprava").value;
+
+    const novaPrihlaska = new Prihlaska(jmeno, email, zprava);
+    seznamPrihlasek.push(novaPrihlaska);
+
+    const li = document.createElement("li");
+    li.textContent = `Jméno: ${jmeno}, Email: ${email}, Zpráva: ${zprava}`;
+    ulSeznam.appendChild(li);
+
+    form.reset();
+});
