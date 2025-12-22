@@ -10,7 +10,6 @@ async function nacistTrenery(cesta) {
     data.forEach(trener => {
       const karta = document.createElement("div");
       karta.classList.add("trener-karta");
-
       // barva podle licence
       if (trener.Licence_aktivni) {
         karta.classList.add("aktivni");
@@ -23,11 +22,48 @@ async function nacistTrenery(cesta) {
         <p><strong>Pohlaví:</strong> ${trener.Gender}</p>
         <p><strong>Narození:</strong> ${trener.birth}</p>
         <p><strong>Licence:</strong> ${trener.Licence}</p>
-        <p><strong>Licence aktivní:</strong> ${trener.Licence_aktivni ? "Ano" : "Ne"}</p>
         <p><strong>Status:</strong> ${trener.Status}</p>
+        <div class="progress">
+          <div class="progress-bar"></div>
+        </div>
       `;
 
       container.appendChild(karta);
+      const bar = karta.querySelector(".progress-bar");
+      let progress = 0;
+      let growInterval = null;
+      let shrinkInterval = null;
+      const cil = parseInt(trener.Training_start);
+
+// NAJETÍ MYŠÍ
+      karta.addEventListener("mouseenter", () => {
+      clearInterval(shrinkInterval);
+      clearInterval(growInterval);
+
+      growInterval = setInterval(() => {
+        if (progress >= cil) {
+          clearInterval(growInterval);
+        } else {
+          progress++;
+          bar.style.width = progress + "%";
+        }
+      }, 15);
+    });
+
+// ODJETÍ MYŠÍ
+karta.addEventListener("mouseleave", () => {
+  clearInterval(growInterval);
+  clearInterval(shrinkInterval);
+
+  shrinkInterval = setInterval(() => {
+    if (progress <= 0) {
+      clearInterval(shrinkInterval);
+    } else {
+      progress--;
+      bar.style.width = progress + "%";
+    }
+  }, 10); // menší = rychlejší návrat
+});
     });
 
   } catch (error) {

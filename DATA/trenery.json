@@ -5,7 +5,7 @@
     "Gender": "male",
     "birth": "20.5.2006",
     "Licence": "D",
-    "Licence_activ": true,
+    "Training_start": "60",
     "Status": "Active"
   },
   {
@@ -14,7 +14,7 @@
     "Gender": "male",
     "birth": "20.5.2006",
     "Licence": "-",
-    "Licence_activ": false,
+    "Training_start": "80",
     "Status": "Active"
   },
   {
@@ -23,7 +23,7 @@
     "Gender": "male",
     "birth": "20.5.2006",
     "Licence": "-",
-    "Licence_activ": false,
+    "Training_start": "30",
     "Status": "Active"
   },
   {
@@ -32,7 +32,7 @@
     "Gender": "male",
     "birth": "30.5.2006",
     "Licence": "D",
-    "Licence_activ": true,
+    "Training_start": "90",
     "Status": "Active"
   },
   {
@@ -41,7 +41,7 @@
     "Gender": "female",
     "birth": "22.11.2002",
     "Licence": "-",
-    "Licence_activ": false,
+    "Training_start": "20",
     "Status": "Active"
   }
 ]
