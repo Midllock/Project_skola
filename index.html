@@ -9,13 +9,18 @@
     <title>Mývalové Starý Harcov Liberec</title>
 </head>
 <body>
+    <button class="hamburger" aria-label="Otevřít menu" aria-expanded="false">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
     <div class="mains">
         <h1>Mývalové Starý Harcov Liberec</h1>
         <div class="menu">
             <a href="#o nas" class="tlacitko-info">O nás</a>
             <a href="#trenery" class="tlacitko-info">Trenéři</a>
             <a href="#kontakt" class="tlacitko-info">Kontakty</a>
-            <a href="#přhládka" class="tlacitko-info">Příhláška</a>
+            <a href="#prihlaseniForm" class="tlacitko-info">Příhláška</a>
         </div>
         <img src="img/logo2.svg" alt="Logo týmu" class="logo">
     </div>
@@ -25,13 +30,12 @@
 O víkendech pak naplno zažíváme adrenalin při zápasech v rámci ligy Českého florbalu.<br> Zde mohou děti nejen změřit síly s ostatními, ale především si užít atmosféru skutečného sportovního klání. <br>  Jsme hrdí na každý pokrok a každou zkušenost, kterou naše děti na hřišti získávají.<br>Jsme víc než jen tým – jsme rodina, která podporuje své členy na hřišti i mimo něj.
         </div>
     </div>
-
-<h2 id="trenery">Trenéři</h2>
-<div class="trenery-container" id="trenery-container"></div>
-<h3 id="kontakt">Kontakty</h3>
-<div class="kontakt-container" id="kontakt-container"></div>
-<div class="prihlaska"></div>
-<div id="prihlaska-container">
+    <h2 id="trenery">Trenéři</h2>
+    <div class="trenery-container" id="trenery-container"></div>
+    <h3 id="kontakt">Kontakty</h3>
+    <div class="kontakt-container" id="kontakt-container"></div>
+    <div class="prihlaska"></div>
+    <div id="prihlaska-container">
     <h4>Formulář přihlášky</h4>
     <form id="prihlaseniForm">
         <input type="text" id="jmeno" placeholder="Jméno" required>
@@ -40,11 +44,8 @@ O víkendech pak naplno zažíváme adrenalin při zápasech v rámci ligy Česk
         <button type="submit">Odeslat</button>
     </form>
     <ul id="seznamPrihlasek"></ul>
-</div>
-
-    <footer>
-    </footer>
-
+    </div>
+    <footer></footer>
     <script src="script.js"></script>
 </body>
 </html>
