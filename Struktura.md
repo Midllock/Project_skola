@@ -19,4 +19,4 @@ web-project/
 ├─ /api
 │ └─ get.php # endpoint vracející puppies.json
 │
-└─ /docs #dokumentace
+└─ /docs # dokumentace
