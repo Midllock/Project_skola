@@ -4,23 +4,19 @@ web-project/
 │
 ├─ /assets
 │ ├─ /css
-│ │ └─ styles.css # hlavní CSS (buildovaný Tailwind nebo vlastní)
+│ │ └─ index.css # hlavní CSS (buildovaný Tailwind nebo vlastní)
 │ ├─ /js
-│ │ ├─ main.js # inicializace, společné funkce
-│ │ ├─ about.js # načítání about JSON
-│ │ ├─ trener.js # načítání trenérů JSON
-│ │ └─ contact.js # odesílání formuláře (AJAX)
-│ └─ /img
-│ ├─ /about
-│ ├─ /shiba
-│ └─ /puppies
+│ │ ├─ trenery.js # načítání trenérů JSON
+│ │ └─ kontakty.js # odesílání formuláře (AJAX)
+│ ├─ /img
+│ ├─ /logo.svg #Hlavní logo webu
+│ └─ /logo2.svg
 │
 ├─ /data
-│ ├─ about.json
 │ ├─ trener.json
 │ └─ contact.json
 │
 ├─ /api
-│ └─ getPuppies.php # endpoint vracející puppies.json
+│ └─ get.php # endpoint vracející puppies.json
 │
 └─ /docs #dokumentace
