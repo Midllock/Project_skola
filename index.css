@@ -121,7 +121,6 @@ h3 {
   border-radius: 5px;
   overflow: hidden;
 }
-
 /* samotná lišta */
 .progress-bar {
   height: 100%;
@@ -129,13 +128,9 @@ h3 {
   background: #4caf50;
   transition: width 0.1s linear;
 }
-
 a:hover {
     background-color: black ;
 }
-
-
-
 footer{
     background-color: black;
     color: white;
@@ -173,7 +168,6 @@ h4 {
     background-color:rgb(11, 11, 11);
     margin-bottom: 5%;
 }
-
 #prihlaska-container input,
 #prihlaska-container textarea {
     background-color: rgb(11, 11, 11);
@@ -195,7 +189,6 @@ h4 {
     border-radius: 5px;
     cursor: pointer;
 }
-
 #prihlaska-container button:hover {
     background-color: black;
 }
@@ -260,7 +253,6 @@ h4 {
         top: 2%;
     }
 }
-
 @media (max-width: 1600px){
     .logo{
         top: 1%;
@@ -293,14 +285,12 @@ h4 {
         transition: transform 0.3s ease-in-out;
         z-index: 999; /* Pod hamburgerem, ale nad obsahem */
     }
-
    .menu.is-active {
         display: flex; /* Zobrazíme, když je aktivní */
         
         margin-bottom: 5%;
         transform: translateX(0); /* Vysune se do obrazovky */
     }
-
     .nav-item {
         margin-right: 0;
         margin-left: 2%;
@@ -314,7 +304,6 @@ h4 {
         width: 24px;
         height: 24px;
     }
-
     .hamburger {
         display: block; /* Zobrazíme hamburger tlačítko */
         position: absolute;
@@ -347,7 +336,6 @@ h4 {
         height: 35px;
     }
 }
-
 @media (max-width: 825px){
     .text{
         font-size: 14px;
