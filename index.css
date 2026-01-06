@@ -140,11 +140,14 @@ footer{
     background-color: black;
     color: white;
     text-align: center;
-    position: fixed;
     bottom: 0;
     width: 100%;
     height: 60px;   
     left: 0;
+}
+footer p{
+    padding-top: 20px;
+    font-size: 10px;
 }
 .trener-karta:hover, .kontakt-karta:hover {
     background-color: rgb(21, 21, 21); /* Světlejší barva okraje při najetí myší */
@@ -269,6 +272,11 @@ h4 {
     }
 }
 @media (max-width: 1400px) {
+    .tabule_info{
+        width: 80%;
+        height: auto;
+        position: relative;
+    }
     .menu {
         display: none; /* Skryjeme původní menu */
         flex-direction: column; /* Položky pod sebou */
@@ -345,3 +353,11 @@ h4 {
         font-size: 14px;
     }
 }
+@media (max-width: 600px){
+    h1{
+        font-size: 15px;
+    }
+    #prihlaska-container {
+        width: 80%;
+    }
+}   
