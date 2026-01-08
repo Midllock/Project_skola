@@ -1,8 +1,30 @@
 body{
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(10, 10, 10);
+    background-image: radial-gradient(
+        800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
+        rgba(255, 255, 255, 0.25), /* Zvýšeno z 0.07 na 0.15 (více světla) */
+        rgba(255, 255, 255, 0.05) 20%, /* Přidán druhý stupeň pro lepší rozptyl */
+        transparent 60% /* Světlo se táhne dál do ztracena */
+    );
     margin: 0;
     font-family: Roboto, sans-serif;
     color:rgb(255, 255, 255);
+    min-height: 100vh;
+    transition: background 0.15s ease-out;
+}
+/* Vytvoříme neviditelnou vrstvu s texturou přes celé pozadí */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Generovaný šum přes SVG data */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.04; /* Velmi jemné, skoro neviditelné */
+    pointer-events: none; /* Aby vrstva neblokovala klikání */
+    z-index: -1;
 }
 h1{
     color: rgb(255, 255, 255);
@@ -19,6 +41,45 @@ h1{
     border: 2px solid #0000; /* Tenký, tmavý okraj */
     border-radius: 5px; /* Lehce zaoblené rohy */
     transition: border-color 0.3s ease-out, border-width 0.3s ease-out; 
+}
+/* Animace pro nadpisy */
+h1, h2, h3 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(to right, #fff, #888);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.trenery-container,.kontakt-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+.trener-karta,.kontakt-karta{
+    background:rgba(0,0,0,0.6);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:35px;
+    padding:15px;
+    text-align:center;
+    backdrop-filter:blur(6px);
+    transition:transform .3s, box-shadow .3s;
+    position: relative;
+    overflow: hidden; /* Důležité pro oříznutí záře */
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    transition: all 0.5s ease;
+}
+.trener-karta:hover,.kontakt-karta:hover{
+    transform: translateY(-10px) scale(1.02);
+    box-shadow:0 20px 40px rgba(0,0,0,.6);
+}
+/* Skleněný efekt pro karty (Glassmorphism) */
+.tabule_info, .trener-karta, .kontakt-karta, #prihlaska-container {
+    background: rgba(20, 20, 20, 0.6) !important;
+    backdrop-filter: blur(10px); /* Rozmazání pozadí pod kartou */
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
 }
 .logo{
     position: absolute;
@@ -62,7 +123,14 @@ a{
     background-color: rgb(11, 11, 11);
     text-decoration: none; /* Odstraní podtržení odkazu */
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+a:hover {
+    background-color: white !important;
+    color: black !important;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
 }
 h2 {
     font-size:35px;
@@ -95,6 +163,21 @@ h3 {
     overflow: hidden; /* Důležité pro oříznutí záře */
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
     transition: all 0.5s ease;
+}
+/* Volitelně: Přidání animovaného odlesku přes kartu */
+.trener-karta::after, .kontakt-karta::after{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.trener-karta:hover::after, .kontakt-karta:hover::after{
+    opacity: 1;
 }
 .kontakt-karta {
     width: 250px;
@@ -155,10 +238,12 @@ h4 {
     margin: 2% auto;
     background-color:rgb(11, 11, 11);
     margin-bottom: 5%;
+    color: white;
 }
 #prihlaska-container input,
 #prihlaska-container textarea {
     background-color: rgb(31, 31, 31);
+    color: white;
     width: 90%;
     padding: 8px;
     margin: 5px 0;
@@ -171,12 +256,31 @@ h4 {
     margin-top:4%;
     padding: 10px;
     border: none;
-    background-color: #5c8df6;
+    background-color: #fff;
     border-radius: 5px;
     cursor: pointer;
+    color: #000;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+/* Efekt pro vstupní pole (inputy) */
+#prihlaska-container input:focus, 
+#prihlaska-container textarea:focus {
+    outline: none;
+    border-color: #5c8df6;
+    box-shadow: 0 0 10px rgba(92, 141, 246, 0.5);
+    background-color: rgb(40, 40, 40);
 }
 #prihlaska-container button:hover {
-    background-color: rgb(61, 60, 60);
+    background-color: #5c8df6;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(92, 141, 246, 0.6);
+}
+
+#prihlaska-container button:hover {
+    background-color: #5c8df6;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(92, 141, 246, 0.6);
 }
 /* Hamburger tlačítko */
 .hamburger{
@@ -343,135 +447,3 @@ h4 {
         font-size: 15px;
     }
 } 
-.trenery-container,.kontakt-container{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:20px;
-}
-
-.trener-karta,.kontakt-karta{
-    background:rgba(0,0,0,0.6);
-    border:1px solid rgba(255,255,255,0.08);
-    border-radius:35px;
-    padding:15px;
-    text-align:center;
-    backdrop-filter:blur(6px);
-    transition:transform .3s, box-shadow .3s;
-    position: relative;
-    overflow: hidden; /* Důležité pro oříznutí záře */
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    transition: all 0.5s ease;
-}
-
-.trener-karta:hover,.kontakt-karta:hover{
-    transform: translateY(-10px) scale(1.02);
-    box-shadow:0 20px 40px rgba(0,0,0,.6);
-}
-
-/* Modernizované pozadí s dynamickým světlem */
-body {
-    background-color: rgb(10, 10, 10);
-    background-image: radial-gradient(
-        800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
-        rgba(255, 255, 255, 0.25), /* Zvýšeno z 0.07 na 0.15 (více světla) */
-        rgba(255, 255, 255, 0.05) 20%, /* Přidán druhý stupeň pro lepší rozptyl */
-        transparent 60% /* Světlo se táhne dál do ztracena */
-    );
-    margin: 0;
-    color: rgb(255, 255, 255);
-    min-height: 100vh;
-    transition: background 0.15s ease-out;
-}
-
-/* Skleněný efekt pro karty (Glassmorphism) */
-.tabule_info, .trener-karta, .kontakt-karta, #prihlaska-container {
-    background: rgba(20, 20, 20, 0.6) !important;
-    backdrop-filter: blur(10px); /* Rozmazání pozadí pod kartou */
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
-}
-
-/* Animace pro nadpisy */
-h1, h2, h3 {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    background: linear-gradient(to right, #fff, #888);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-/* Vylepšení tlačítek a odkazů */
-a {
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-a:hover {
-    background-color: white !important;
-    color: black !important;
-    transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
-}
-
-/* Efekt pro vstupní pole (inputy) */
-#prihlaska-container input:focus, 
-#prihlaska-container textarea:focus {
-    outline: none;
-    border-color: #5c8df6;
-    box-shadow: 0 0 10px rgba(92, 141, 246, 0.5);
-    background-color: rgb(40, 40, 40);
-}
-
-/* Tlačítko s "glow" efektem */
-#prihlaska-container button {
-    background-color: #fff;
-    color: #000;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-#prihlaska-container button:hover {
-    background-color: #5c8df6;
-    color: #fff;
-    box-shadow: 0 0 20px rgba(92, 141, 246, 0.6);
-}
-
-/* Vytvoříme neviditelnou vrstvu s texturou přes celé pozadí */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* Generovaný šum přes SVG data */
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-    opacity: 0.04; /* Velmi jemné, skoro neviditelné */
-    pointer-events: none; /* Aby vrstva neblokovala klikání */
-    z-index: -1;
-}
-.trener-karta, .kontakt-karta {
-    position: relative;
-    overflow: hidden; /* Důležité pro oříznutí záře */
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    transition: all 0.5s ease;
-}
-
-/* Volitelně: Přidání animovaného odlesku přes kartu */
-.trener-karta::after, .kontakt-karta::after{
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.trener-karta:hover::after, .kontakt-karta:hover::after{
-    opacity: 1;
-}
