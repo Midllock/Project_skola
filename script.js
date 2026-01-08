@@ -8,11 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburgerButton.addEventListener('click', () => {
             // Přepne třídu pro animaci hamburger ikony (na křížek/zpět)
             hamburgerButton.classList.toggle('is-active');
-            
             // Přepne ARIA atribut pro přístupnost
             const isExpanded = hamburgerButton.getAttribute('aria-expanded') === 'true' || false;
             hamburgerButton.setAttribute('aria-expanded', !isExpanded);
-
             // Přepne třídu pro zobrazení/skrytí navigačního menu
             navigationMenu.classList.toggle('is-active');
         });
@@ -21,16 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 document.querySelector('.menu')
-
 // ===== TRENÉŘI =====
 async function nacistTrenery(cesta) {
   try {
     const response = await fetch(cesta);
     if (!response.ok) throw new Error(response.status);
-
     const data = await response.json();
     const container = document.getElementById("trenery-container");
-
     data.forEach(trener => {
       const karta = document.createElement("div");
       karta.classList.add("trener-karta");
@@ -40,7 +35,6 @@ async function nacistTrenery(cesta) {
       } else {
         karta.classList.add("neaktivni");
       }
-
       karta.innerHTML = `
         <h3>${trener.Name}</h3>
         <p><strong>Pohlaví:</strong> ${trener.Gender}</p>
@@ -51,19 +45,16 @@ async function nacistTrenery(cesta) {
           <div class="progress-bar"></div>
         </div>
       `;
-
       container.appendChild(karta);
       const bar = karta.querySelector(".progress-bar");
       let progress = 0;
       let growInterval = null;
       let shrinkInterval = null;
       const cil = parseInt(trener.Training_start);
-
 // NAJETÍ MYŠÍ
       karta.addEventListener("mouseenter", () => {
       clearInterval(shrinkInterval);
       clearInterval(growInterval);
-
       growInterval = setInterval(() => {
         if (progress >= cil) {
           clearInterval(growInterval);
@@ -73,7 +64,6 @@ async function nacistTrenery(cesta) {
         }
       }, 15);
     });
-
 // ODJETÍ MYŠÍ
 karta.addEventListener("mouseleave", () => {
   clearInterval(growInterval);
@@ -94,10 +84,7 @@ karta.addEventListener("mouseleave", () => {
     console.error("Chyba při načítání trenérů:", error);
   }
 }
-
 nacistTrenery("DATA/trenery.json");
-
-
 // ===== KONTAKTY =====
 async function nacistKontakty(cesta) {
   try {
@@ -124,9 +111,7 @@ async function nacistKontakty(cesta) {
     console.error("Chyba při načítání kontaktů:", error);
   }
 }
-
 nacistKontakty("DATA/kontakty.json");
-
 class Prihlaska {
     constructor(jmeno, email, zprava) {
         this.jmeno = jmeno;
@@ -134,11 +119,9 @@ class Prihlaska {
         this.zprava = zprava;
     }
 }
-
 const seznamPrihlasek = [];
 const form = document.getElementById("prihlaseniForm");
 const ulSeznam = document.getElementById("seznamPrihlasek");
-
 form.addEventListener("submit", function(e) {
     e.preventDefault();
     const jmeno = document.getElementById("jmeno").value;
