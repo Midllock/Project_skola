@@ -25,6 +25,7 @@
         <img src="img/logo2.svg" alt="Logo týmu" class="logo">
     </div>
     <div class="tabule_info">
+        <section class="diagonal-bg"></section>
         <div class="text" id="o nas">
             <p class="info">O nás</p><br>Jsme menší, ale o to přátelštější tým, který za sebou nese už kus zajímavé historie. Naše komunita se soustředí <br> primárně na florbal, sport, který naše děti milují a kterému se věnují s maximálním nasazením.<br>Florbal u nás není jen o tréninku, je to o týmovém duchu a radosti ze hry.<br> Naše mladé talenty mají na programu dvakrát týdně intenzivní tréninky, kde pilují techniku, taktiku a kondici pod vedením zkušených trenérů.<br><br>
 O víkendech pak naplno zažíváme adrenalin při zápasech v rámci ligy Českého florbalu.<br> Zde mohou děti nejen změřit síly s ostatními, ale především si užít atmosféru skutečného sportovního klání. <br>  Jsme hrdí na každý pokrok a každou zkušenost, kterou naše děti na hřišti získávají.<br>Jsme víc než jen tým – jsme rodina, která podporuje své členy na hřišti i mimo něj.
@@ -47,6 +48,17 @@ O víkendech pak naplno zažíváme adrenalin při zápasech v rámci ligy Česk
     </div>
     <footer><p>&copy; 2025 Mývalové Starý Harcov Liberec <br>Všechna práva vyhrazena. <br> Design a vývoj: Rostislav Patočka
     </p></footer>
+    <script>
+  document.addEventListener('mousemove', e => {
+    // Přičítáme window.scrollY k vertikální poloze myši
+    const x = e.clientX;
+    const y = e.clientY + window.scrollY;
+    
+    document.body.style.setProperty('--mouse-x', x + 'px');
+    document.body.style.setProperty('--mouse-y', y + 'px');
+  });
+</script>
     <script src="script.js"></script>
+
 </body>
 </html>

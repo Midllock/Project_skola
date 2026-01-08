@@ -1,10 +1,11 @@
 body{
-    background-color: rgb(31, 31, 31);
+    background-color: rgb(20, 20, 20);
     margin: 0;
     font-family: Roboto, sans-serif;
+    color:rgb(255, 255, 255);
 }
 h1{
-    color: white;
+    color: rgb(255, 255, 255);
     z-index: 100;
     text-align: center;
     background-color: black;
@@ -29,7 +30,6 @@ h1{
 .tabule_info{
     background-color:  rgb(11, 11, 11);
     margin-left: 10%;
-    color: white;
     width: 80%;
     height: 330px;
     left: 0;
@@ -43,7 +43,6 @@ h1{
     margin: 0;
 }
 .text{
-    color: white;
     font-size: 20px;
     text-align: left;
     left: 0;
@@ -52,27 +51,25 @@ h1{
 .menu{
     position: absolute;
     top: 3%;
-    right: 5%;
+    right: 0.2%;
 }
 a{
     display: inline-flex;
-    margin-right: 8px;
+    color:rgb(186, 185, 188);
+    margin-right: 3px;
     font-size: 15px;
     padding: 5px 10px;
     background-color: rgb(11, 11, 11);
-    color: white;
     text-decoration: none; /* Odstraní podtržení odkazu */
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 h2 {
-    color: white;
     font-size:35px;
     text-align: center;
     margin-top: 40px;
 }
 h3 {
-    color: white;
     font-size:35px;
     text-align: center;
     margin-top: 40px;
@@ -85,21 +82,23 @@ h3 {
     margin-top: 20px;
 }
 .trener-karta, .kontakt-karta {
-    color: white;
     text-align: center;
     width: 180px;
     height: 155px;
-    padding: 5px;
-    border-radius: 40px;
-    background-color:  rgb(11, 11, 11);
-    border: 1px solid  rgb(11, 11, 11);
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    transition: background-color ease-in-out 0.5s, border-color ease-in-out 0.5s;
     cursor: pointer;
+    background:rgba(0,0,0,0.6);
+    border-radius:35px;
+    padding:15px;
+    backdrop-filter:blur(6px);
+    position: relative;
+    overflow: hidden; /* Důležité pro oříznutí záře */
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    transition: all 0.5s ease;
 }
 .kontakt-karta {
-    width: 220px;
-    height: 100px;
+    width: 250px;
+    height: 80px;
 } 
 .trener-karta h3, .kontakt-karta h3 {
     padding-top: 4px;
@@ -132,8 +131,7 @@ a:hover {
     background-color: black ;
 }
 footer{
-    background-color: black;
-    color: white;
+    background: black;
     text-align: center;
     bottom: 0;
     width: 100%;
@@ -144,22 +142,12 @@ footer p{
     padding-top: 20px;
     font-size: 10px;
 }
-.trener-karta:hover, .kontakt-karta:hover {
-    background-color: rgb(21, 21, 21); /* Světlejší barva okraje při najetí myší */
-    border-color: rgb(21, 21, 21);
-    
-}
-.main:hover {
-    border-color: rgb(31, 31, 31); /* Světlejší barva okraje při najetí myší */
-    border-width: 2px; /* Zvýšení šířky okraje při najetí myší */
-}
 h4 {
-    color: white;
+
     text-align: center;
     font-size: 30px;
 }
 #prihlaska-container {
-    color: white;
     border: 1px solid rgb(11, 11, 11);
     padding: 10px;
     border-radius: 8px;
@@ -170,8 +158,7 @@ h4 {
 }
 #prihlaska-container input,
 #prihlaska-container textarea {
-    background-color: rgb(11, 11, 11);
-    color: white;
+    background-color: rgb(31, 31, 31);
     width: 90%;
     padding: 8px;
     margin: 5px 0;
@@ -185,12 +172,11 @@ h4 {
     padding: 10px;
     border: none;
     background-color: #5c8df6;
-    color: white;
     border-radius: 5px;
     cursor: pointer;
 }
 #prihlaska-container button:hover {
-    background-color: black;
+    background-color: rgb(61, 60, 60);
 }
 /* Hamburger tlačítko */
 .hamburger{
@@ -263,7 +249,7 @@ h4 {
         top: 2%;
     }
 }
-@media (max-width: 1400px) {
+@media (max-width: 1440px) {
     .tabule_info{
         width: 80%;
         height: auto;
@@ -340,12 +326,152 @@ h4 {
     .text{
         font-size: 14px;
     }
-}
-@media (max-width: 600px){
     h1{
-        font-size: 15px;
+        font-size: 25px;
+    }
+}
+@media (max-width: 680px){
+    h1{
+        font-size: 18px;
     }
     #prihlaska-container {
         width: 80%;
     }
 }   
+@media (max-width: 520px){
+    h1{
+        font-size: 15px;
+    }
+} 
+.trenery-container,.kontakt-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.trener-karta,.kontakt-karta{
+    background:rgba(0,0,0,0.6);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:35px;
+    padding:15px;
+    text-align:center;
+    backdrop-filter:blur(6px);
+    transition:transform .3s, box-shadow .3s;
+    position: relative;
+    overflow: hidden; /* Důležité pro oříznutí záře */
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    transition: all 0.5s ease;
+}
+
+.trener-karta:hover,.kontakt-karta:hover{
+    transform: translateY(-10px) scale(1.02);
+    box-shadow:0 20px 40px rgba(0,0,0,.6);
+}
+
+/* Modernizované pozadí s dynamickým světlem */
+body {
+    background-color: rgb(10, 10, 10);
+    background-image: radial-gradient(
+        800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
+        rgba(255, 255, 255, 0.25), /* Zvýšeno z 0.07 na 0.15 (více světla) */
+        rgba(255, 255, 255, 0.05) 20%, /* Přidán druhý stupeň pro lepší rozptyl */
+        transparent 60% /* Světlo se táhne dál do ztracena */
+    );
+    margin: 0;
+    color: rgb(255, 255, 255);
+    min-height: 100vh;
+    transition: background 0.15s ease-out;
+}
+
+/* Skleněný efekt pro karty (Glassmorphism) */
+.tabule_info, .trener-karta, .kontakt-karta, #prihlaska-container {
+    background: rgba(20, 20, 20, 0.6) !important;
+    backdrop-filter: blur(10px); /* Rozmazání pozadí pod kartou */
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+}
+
+/* Animace pro nadpisy */
+h1, h2, h3 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(to right, #fff, #888);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Vylepšení tlačítek a odkazů */
+a {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+a:hover {
+    background-color: white !important;
+    color: black !important;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+/* Efekt pro vstupní pole (inputy) */
+#prihlaska-container input:focus, 
+#prihlaska-container textarea:focus {
+    outline: none;
+    border-color: #5c8df6;
+    box-shadow: 0 0 10px rgba(92, 141, 246, 0.5);
+    background-color: rgb(40, 40, 40);
+}
+
+/* Tlačítko s "glow" efektem */
+#prihlaska-container button {
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#prihlaska-container button:hover {
+    background-color: #5c8df6;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(92, 141, 246, 0.6);
+}
+
+/* Vytvoříme neviditelnou vrstvu s texturou přes celé pozadí */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Generovaný šum přes SVG data */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.04; /* Velmi jemné, skoro neviditelné */
+    pointer-events: none; /* Aby vrstva neblokovala klikání */
+    z-index: -1;
+}
+.trener-karta, .kontakt-karta {
+    position: relative;
+    overflow: hidden; /* Důležité pro oříznutí záře */
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    transition: all 0.5s ease;
+}
+
+/* Volitelně: Přidání animovaného odlesku přes kartu */
+.trener-karta::after, .kontakt-karta::after{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.trener-karta:hover::after, .kontakt-karta:hover::after{
+    opacity: 1;
+}
