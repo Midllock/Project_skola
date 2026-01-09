@@ -1,4 +1,10 @@
-
+document.addEventListener('mousemove', e => {
+    // Přičítáme window.scrollY k vertikální poloze myši
+    const x = e.clientX;
+    const y = e.clientY + window.scrollY;
+    document.body.style.setProperty('--mouse-x', x + 'px');
+    document.body.style.setProperty('--mouse-y', y + 'px');
+  });
 // ===== HAMBURGER MENU =====
 document.addEventListener('DOMContentLoaded', () => {
     const hamburgerButton = document.querySelector('.hamburger');
