@@ -8,15 +8,12 @@ web-project/
 │ ├─ /js
 │ │ ├─ trenery.js # načítání trenérů JSON
 │ │ └─ kontakty.js # odesílání formuláře (AJAX)
-│ ├─ /img
-│ ├─ /logo.svg #Hlavní logo webu
-│ └─ /logo2.svg
+│ └─ /img
+│   ├─ /logo.svg #Hlavní logo webu
+│   └─/logo2.svg
 │
 ├─ /data
 │ ├─ trener.json
 │ └─ contact.json
 │
-├─ /api
-│ └─ get.php # endpoint vracející puppies.json
-│
-└─ /docs # dokumentace
+└─ /docs #dokumentace
