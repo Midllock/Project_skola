@@ -109,10 +109,8 @@ async function nacistKontakty(cesta) {
         <p><strong>Email:</strong> ${contact.Email}</p>
         <p><strong>Telefon:</strong> ${contact.Telefon}</p>
       `;
-
       container.appendChild(karta);
     });
-
   } catch (error) {
     console.error("Chyba při načítání kontaktů:", error);
   }
