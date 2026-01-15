@@ -111,7 +111,7 @@ h1, h2, h3 {
 }
 .menu{
     position: absolute;
-    top: 3%;
+    top: 15%;
     right: 0.2%;
 }
 a{
@@ -252,7 +252,8 @@ h4 {
 }
 #prihlaska-container button {
     margin-left: 45%;
-    margin-top:4%;
+    margin-top:2%;
+    margin-bottom: 2%;
     padding: 10px;
     border: none;
     background-color: #fff;
@@ -292,6 +293,7 @@ h4 {
     /* Pro CSS hamburger ikonu */
     width: 40px; /* Velikost klikací oblasti */
     height: 40px;
+    top: 5%; /* Vertikální umístění */
     position: relative; /* Pro vnitřní span elementy */
 }
 .hamburger-box {
@@ -400,7 +402,6 @@ h4 {
     .hamburger {
         display: block; /* Zobrazíme hamburger tlačítko */
         position: absolute;
-        top: 3%;
         transform: translateY(-50%); /* Vertikální centrování v headeru */
         right: 4%; /* Odsazení od pravého kraje */
     }
@@ -418,9 +419,6 @@ h4 {
     }
 }
 @media (max-width: 990px){
-    .hamburger {
-        top: 2%;
-    }
     .text{
         font-size: 16px;
     }
@@ -449,6 +447,9 @@ h4 {
 @media (max-width: 520px){
     h1{
         font-size: 15px;
+    }
+    .hamburger {
+        top: 3%;
     }
 } 
 @media (max-width: 430px){
