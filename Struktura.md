@@ -9,8 +9,8 @@ web-project/
 │ │ ├─ trenery.js # načítání trenérů JSON
 │ │ └─ kontakty.js # odesílání formuláře (AJAX)
 │ └─ /img
-│   ├─ /logo.svg #Hlavní logo webu
-│   └─/logo2.svg
+│   ├─ logo.svg #Hlavní logo webu
+│   └─ logo2.svg
 │
 ├─ /data
 │ ├─ trener.json
