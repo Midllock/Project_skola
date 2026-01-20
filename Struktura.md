@@ -1,4 +1,4 @@
-web-project/
+Project_Skola/
 ├─ README.md # krátký popis projektu + instrukce pro běh
 │ └─ index.html
 │
